@@ -34,7 +34,6 @@
                             }
                         }).done(function(resp) {
                             if (resp) {
-                                alert(resp);
                                 swal("Eliminado con éxito", {
                                     icon: "success",
                                 });

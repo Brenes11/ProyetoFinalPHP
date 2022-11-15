@@ -89,7 +89,7 @@ class DaoMotoristas{
                 $html .= "<td>" . $fila["id_vehiculo"] . "</td>";
                 $html .= "<td>" . $fila["placa"] . "</td>";
                 $html .= "<td>" . $fila["marca"] . "</td>";
-                $html .= "<td> <a class=\"badge bg-primary changeSelected\" data-bs-toggle=\"modal\" data-bs-target=\"#exampleModal\" href=\"javascript:seleccionar('" . $fila["id_motorista"] . "', '" . $fila["nombre"] . "')\" onclick = \" seleccionar('".$fila["id_motorista"]."','".$fila["nombre"]."','".$fila["apellido"]."','".$fila["nit"]."','".$fila["dui"]."','".$fila["id_vehiculo"]."')\"  >Seleccionar</a> <a class=\"badge bg-danger changeSelected\" onClick=\" eliminar('".$fila["id_motorista"]."')\">eliminar</a></td>";
+                $html .= "<td> <a class=\"badge bg-danger changeSelected\" onClick=\" eliminar('".$fila["id_motorista"]."')\">eliminar</a></td>";
                 $html .= "</tr>";
             }
             $html .= "</tbody></table>";

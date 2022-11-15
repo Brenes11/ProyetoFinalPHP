@@ -16,6 +16,9 @@
     function loadRutas() {
         location.href = "rutas.php";
     }
+    function loadMotoristas(){
+        location.href = "motoristas.php";
+    }
 </script>
 
 <body>
@@ -73,7 +76,7 @@
                         <h5 class="card-title">Vehiculos</h5>
                     </div>
                 </div>
-                <div class="card" style="cursor: pointer;">
+                <div class="card" style="cursor: pointer;" onclick="loadMotoristas()">
                     <img class="card-img-top" src="../img/volante.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Conductores</h5>
