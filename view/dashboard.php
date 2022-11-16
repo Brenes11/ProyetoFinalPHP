@@ -25,6 +25,9 @@
     function loadVehiculo(){
         location.href = "vehiculo.php";
     }
+    function loadCliente(){
+        location.href = "Cliente.php";
+    }
 </script>
 
 <body>
@@ -88,7 +91,7 @@
                         <h5 class="card-title">Conductores</h5>
                     </div>
                 </div>
-                <div class="card" style="cursor: pointer;">
+                <div class="card" style="cursor: pointer;" onclick="loadCliente()">
                     <img class="card-img-top" src="../img/cliente.png" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Clientes</h5>
