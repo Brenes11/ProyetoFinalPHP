@@ -19,6 +19,12 @@
     function loadMotoristas(){
         location.href = "motoristas.php";
     }
+    function loadUsuario(){
+        location.href = "usuario.php";
+    }
+    function loadVehiculo(){
+        location.href = "vehiculo.php";
+    }
 </script>
 
 <body>
@@ -70,7 +76,7 @@
     <div class="container" style="max-width: 850px;">
         <div class="row">
             <div class="card-deck">
-                <div class="card" style="cursor: pointer;" onclick="javascript:loadRutas()">
+                <div class="card" style="cursor: pointer;" onclick="loadVehiculo()">
                     <img class="card-img-top" src="../img/vehicule.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Vehiculos</h5>
@@ -93,7 +99,7 @@
         <br>
         <div class="row">
             <div class="card-deck">
-                <div class="card" style="cursor: pointer;">
+                <div class="card" style="cursor: pointer;" onclick="loadUsuario()">
                     <img class="card-img-top" src="../img/perfiles-de-usuario.png" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Usuarios</h5>
