@@ -14,24 +14,27 @@ if($_POST){
         $ruta = new Ruta();
         switch ($key) {
             case 'get':
-                //$respuesta = $dao->getVehiculo();
+                $respuesta = $dao->getRutas();
                 break;
             case 'selectCategoria':
                 $respuesta = $dao->getMotoristasByAvailability();
+                break;
+            case 'selectClientes':
+                $respuesta = $dao->getClientesSelect();
                 break;
             case 'eliminar':
                 //$codigo = $_POST["codigo"];
                 //$respuesta = $dao->eliminarVehiculo($codigo);
                 break;
             case 'insertar':
-                // parse_str($_POST["data"], $data);
-                // $vehiculo->setPlaca($data["txtPlaca"]);
-                // $vehiculo->setMarca($data["txtMarca"]);
-                // $vehiculo->setModelo($data["txtModelo"]);
-                // $vehiculo->setAnioFabricacion($data["txtAnioFabricacion"]);
-                // $vehiculo->setKilometraje($data["txtKilometraje"]);
-                // $vehiculo->setDisponibilidad($data["txtDisponibilidad"]);
-                // $respuesta = $dao->insertarVehiculo($vehiculo);
+                 parse_str($_POST["data"], $data);
+                 $ruta->setDesde($data["txtDesde"]);
+                 $ruta->setHasta($data["txtHasta"]);
+                 $ruta->setFecha($data["txtFecha"]);
+                 $ruta->setIdMotorista($data["selectCategoria"]);
+                 $ruta->setIdCliente($data["selectClientes"]);
+                 $ruta->setCarga($data["txtCarga"]);
+                 $respuesta = $dao->insertarRuta($ruta);
 
                 break;
             default:
@@ -41,4 +44,3 @@ if($_POST){
     }
 }
 echo $respuesta;
-?>
